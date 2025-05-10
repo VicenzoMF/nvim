@@ -37,8 +37,11 @@ opt.autochdir = false
 opt.iskeyword:append("-")
 opt.selection = "exclusive"
 opt.mouse = "a"
-opt.clipboard:append("unnamedplus")
 opt.modifiable = true
 vim.opt.guicursor = "i:ver25,a:blinkon100"
 opt.encoding = "UTF-8"
 opt.showmode = false
+
+vim.schedule(function()
+	opt.clipboard = "unnamedplus"
+end)
