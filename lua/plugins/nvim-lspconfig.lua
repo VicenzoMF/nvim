@@ -12,7 +12,12 @@ local config = function()
 	local solhint = require("efmls-configs.linters.solhint")
 	local eslint = require("efmls-configs.linters.eslint")
 	-- local prettier_d = require("efmls-configs.formatters.prettier_d")
+	local golangci = require("efmls-configs.linters.golangci_lint")
+	--local golang = require("efmls-configs.formatters.golang")
 
+	-- Golang
+
+	-- Lua
 	lspconfig.lua_ls.setup({
 		capabilities = capabilities,
 		settings = {
@@ -93,6 +98,7 @@ local config = function()
 				typescriptreact = { eslint },
 				javascriptreact = { eslint },
 				vue = { eslint },
+				golangci = { golangci },
 			},
 		},
 	})
@@ -111,4 +117,3 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 	},
 }
-

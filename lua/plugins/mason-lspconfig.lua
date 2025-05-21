@@ -20,6 +20,8 @@ local mason_lspconfig = {
 			"solidity_ls",
 			"efm",
 			"lua_ls",
+      "ts_ls",
+      "emmet_ls",
 		},
 		automatic_installation = true,
 	},
